@@ -1,0 +1,48 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.calendar {
+  display: grid;
+  grid-template-columns: 60px;
+  grid-auto-columns: auto;
+  grid-auto-rows: 15px;
+  grid-gap: 3px 3px;
+  justify-content: start;
+}
+
+.date {
+}
+
+.hour { 
+  color: #CCC;
+}
+
+.lodging {
+
+}
+
+.date p {
+  padding: 0;
+  margin: 0;
+  color: #333;
+}
+
+.event-content {
+  background: #005eb8;
+  color: white;
+  border-radius: 10px;
+  justify-self: start;
+  height: 100%;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.date-content .hour {
+  background: white;
+}
+
+.weekend {
+  font-weight: bold;
+}

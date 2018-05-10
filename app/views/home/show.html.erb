@@ -1,0 +1,19 @@
+<h1>Home#show</h1>
+<p>Find me in app/views/home/show.html.erb</p>
+
+<div class="calendar">
+  <% (@end_date - @start_date).to_i.times do |n| %>
+    <%= render 'day', date: (@start_date + n.days), row: n %>
+  <% end %>
+
+  <% @events.each do |event| %>
+    <% row_start = (event.start_at.to_date - @start_date).to_i * 24 + event.start_at.hour + 1 %>
+    <% row_span = (event.end_at - event.start_at)/60/60 %>
+    <div class='lodging' <%= grid_span_style(3, 1, row_start, row_span.to_i) %>>
+      <div class='event-content'>
+        <%= event.name %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,9 @@
+<div class="date <%= date.on_weekend? ? 'weekend' : 'weekday' %>" <%= grid_span_style(1, 1, row  * 24 + 1, 24) %> >
+  <p><%= date.strftime('%b %d') %></p>
+</div>
+
+<% 24.times do |h| %>
+  <div class='hour' <%= grid_span_style(2, 1, row * 24 + h + 1, 1) %>> 
+    <%= h %>
+  </div>
+<% end %>
