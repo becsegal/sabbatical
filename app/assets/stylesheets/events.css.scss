@@ -2,3 +2,34 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
+
+.events thead {
+  font-weight: bold;
+}
+
+.events td {
+  padding-left: 15px;
+}
+
+#event_form div {
+  margin-bottom: 10px;
+}
+
+#event_form label {
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+#event_form input.string {
+  width: 300px;
+  font-size: 12px;
+  padding: 2px;
+}
+
+#event_form input[type=submit] {
+  margin-left: 200px;
+  font-size: 12px;
+}

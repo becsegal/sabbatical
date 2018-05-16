@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
   def create
     Event.create(event_params)
-    redirect_to action: :new, notice: "Added <%= link_to(event, event.id) %>".html_safe
+    redirect_to action: :index, notice: "Added <%= link_to(event, event.id) %>".html_safe
   end
 
   def edit

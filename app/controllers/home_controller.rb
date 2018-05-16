@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
+  before_action :require_user
+
   def show
-    unless current_user
+    unless current_user.member?
       render 'unauthorized' and return
     end
     @start_date = Date.parse('2018-06-07')
@@ -8,6 +10,11 @@ class HomeController < ApplicationController
     @events = Event.all
   end
 
-  def test
+  private
+
+  def require_user
+    if current_user.nil?
+      raise NotAuthorized.new('Please login in')
+    end
   end
 end

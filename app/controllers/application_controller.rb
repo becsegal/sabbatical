@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   def render_error_page(status:, text:, template: 'errors/routing')
     respond_to do |format|
       format.json { render json: {errors: [message: "#{status} #{text}"]}, status: status }
-      format.html { render template: template, status: status, layout: false }
+      format.html { render template: template, status: status }
       format.any  { head status }
     end
   end

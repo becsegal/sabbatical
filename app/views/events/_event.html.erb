@@ -1,10 +1,10 @@
 <tr>
   <td><%= event.category %></td>
   <td><a href='<%= event.url %>'><%= event.name %></a></td>
-  <td><%= event.start_at %></td>
-  <td><%= event.end_at %></td>
-  <td><%= event.checkin %></td>
-  <td><%= event.checkout %></td>
+  <td><%= event.start_at&.strftime("%Y-%m-%d %H:%M") %></td>
+  <td><%= event.end_at&.strftime("%Y-%m-%d %H:%M") %></td>
+  <td><%= event.checkin&.strftime("%Y-%m-%d %H:%M") %></td>
+  <td><%= event.checkout&.strftime("%Y-%m-%d %H:%M") %></td>
   <td><a href='<%= event.itinerary_url %>'><%= event.confirmation_number || 'itinerary' %></a></td>
   <td>
     <%= link_to 'Edit', edit_event_path(event) %>

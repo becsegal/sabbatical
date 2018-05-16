@@ -1,16 +1,17 @@
+<p><%= link_to 'New', new_event_path %><p>
+
 <div class='events'>
   <table>
-      <tr>
+      <thead>
         <td>category</td>
         <td>name</td>
-        <td>start_at</td>
-        <td>end_at</td>
-        <td>checkin</td>
-        <td>checkout</td>
+        <td>start_at_utc</td>
+        <td>end_at_utc</td>
+        <td>checkin_utc</td>
+        <td>checkout_utc</td>
         <td>confirmation_number</td>
         <td>actions</td>
-      </tr>
-    </th>
-    <%= render @events %>
+      </thead>
+      <%= render @events %>
   </table>
 </div>
