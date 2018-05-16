@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def show
-    unless current_user&.member?
+    unless current_user
       render 'unauthorized' and return
     end
     @start_date = Date.parse('2018-06-07')
