@@ -1,4 +1,13 @@
-<div><%= event.category %></div>
-<div><a href='<%= event.url %>'><%= event.name %></a></div>
-<div><%= event.start_at %></div>
-<div><%= event.end_at %></div>
+<tr>
+  <td><%= event.category %></td>
+  <td><a href='<%= event.url %>'><%= event.name %></a></td>
+  <td><%= event.start_at %></td>
+  <td><%= event.end_at %></td>
+  <td><%= event.checkin %></td>
+  <td><%= event.checkout %></td>
+  <td><a href='<%= event.itinerary_url %>'><%= event.confirmation_number || 'itinerary' %></a></td>
+  <td>
+    <%= link_to 'Edit', edit_event_path(event) %>
+    <%= link_to 'Delete', event, method: :delete %>
+  </td>
+</tr>

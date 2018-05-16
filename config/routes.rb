@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   root to: "home#show"
 
+  get 'test', to: 'home#test'
+
   resources :events
 end

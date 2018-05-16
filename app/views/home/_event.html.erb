@@ -1,0 +1,7 @@
+<% hours_from_start = (event.start_at.to_date - @start_date).to_i * 24 + event.start_at.hour + 1 %>
+<% duration_hours = (event.end_at - event.start_at)/60/60 %>
+<div class='event-container <%= event.category %>' <%= grid_span_style(hours_from_start, duration_hours.to_i) %>>
+  <div class='event-content'>
+    <%= event.name %>
+  </div>
+</div>

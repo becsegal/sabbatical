@@ -7,4 +7,7 @@ class HomeController < ApplicationController
     @end_date = Date.parse('2018-09-17')
     @events = Event.all
   end
+
+  def test
+  end
 end

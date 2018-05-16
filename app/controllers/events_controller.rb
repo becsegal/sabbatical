@@ -16,8 +16,16 @@ class EventsController < ApplicationController
     redirect_to action: :new, notice: "Added <%= link_to(event, event.id) %>".html_safe
   end
 
+  def edit
+    @event = event
+  end
+
+  def update
+    event.update_attributes(event_params)
+    redirect_to action: :new, notice: "Added <%= link_to(event, event.id) %>".html_safe
+  end
+
   def destroy
-    event = Event.find(params[:id])
     event.destroy
     redirect_to action: :index
   end
@@ -26,5 +34,9 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit!
+  end
+
+  def event
+    Event.find(params[:id])
   end
 end

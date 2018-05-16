@@ -1,0 +1,12 @@
+<%= simple_form_for event do |f| %>
+  <%= f.input :category %>
+  <%= f.input :name %>
+  <%= f.input :start_at, as: :string %>
+  <%= f.input :end_at, as: :string %>
+  <%= f.input :checkin, as: :string %>
+  <%= f.input :checkout, as: :string %>
+  <%= f.input :url %>
+  <%= f.input :itinerary_url %>
+  <%= f.input :confirmation_number %>
+  <%= f.submit %>
+<% end %>

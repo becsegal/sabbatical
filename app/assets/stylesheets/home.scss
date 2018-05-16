@@ -4,19 +4,20 @@
 
 
 .calendar {
-  display: grid;
-  grid-template-columns: 60px;
-  grid-auto-columns: auto;
-  grid-auto-rows: 15px;
-  grid-gap: 3px 3px;
-  justify-content: start;
+  position: relative;
 }
 
 .date {
+  position: absolute;
+  left: 10px;
+  box-sizing: border-box;
+  width: 100px;
 }
 
 .hour { 
+  position: absolute;
   color: #CCC;
+  left: 80px;
 }
 
 .lodging {
@@ -29,14 +30,27 @@
   color: #333;
 }
 
+.event-container {
+  position: absolute;
+  left: 100px;
+  box-sizing: border-box;
+  width: 100px;
+  border-radius: 5px;
+  min-height: 20px;
+  padding: 5px;
+  overflow: hidden;
+}
+
 .event-content {
-  background: #005eb8;
-  color: white;
-  border-radius: 10px;
-  justify-self: start;
-  height: 100%;
   text-align: center;
+}
+.train, .flight {
+  background: rgb(142, 211, 195);
   margin-left: 10px;
+}
+.lodging { 
+  background: rgb(239, 200, 96);
+  margin-left: 30px;
 }
 
 .date-content .hour {
